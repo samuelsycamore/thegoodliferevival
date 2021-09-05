@@ -64,7 +64,8 @@ const Hero = () => {
                     Introduction to Foraging
                   </h3>
                   <p className="mt-2 text-sm text-gray-600 dark:text-gray-400 sm:text-base lg:text-sm xl:text-base">
-                    Interested in foraging, but feeling intimidated and unsure where to begin? This ebook was written with the absolute beginner in mind.
+                    Interested in foraging, but feeling intimidated and unsure where to begin? This
+                    ebook was written with the absolute beginner in mind.
                   </p>
                 </div>
               </div>
@@ -91,13 +92,12 @@ const Hero = () => {
                     Foraging North America
                   </h3>
                   <p className="mt-2 text-sm text-gray-600 dark:text-gray-400 sm:text-base lg:text-sm xl:text-base">
-                  Learn the pattern language of edible wild plants through this 12-week course on botany, taxonomy, and ecology.
+                    Learn the pattern language of edible wild plants through this 12-week course on
+                    botany, taxonomy, and ecology.
                   </p>
                 </div>
               </div>
             </Link>
-
-            
           </div>
         </div>
       </div>

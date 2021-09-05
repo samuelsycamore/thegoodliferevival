@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://davidlevai.com/sitemap.xml
+Sitemap: https://www.thegoodliferevival.com/sitemap.xml
