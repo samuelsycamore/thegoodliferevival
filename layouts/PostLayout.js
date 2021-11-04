@@ -94,9 +94,13 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                           )}
                         </dd>
                         <dt className="sr-only">Occupation</dt>
-                        <dd className="text-gray-700 dark:text-gray-300 leading-6">{author.occupation}</dd>
+                        <dd className="text-gray-700 dark:text-gray-300 leading-5">
+                          {author.occupation}
+                        </dd>
                         <dt className="sr-only">Education</dt>
-                        <dd className="text-gray-700 dark:text-gray-300 leading-6">{author.education}</dd>
+                        <dd className="text-gray-700 dark:text-gray-300 leading-5">
+                          {author.education}
+                        </dd>
                       </dl>
                     </li>
                   ))}

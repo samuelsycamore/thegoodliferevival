@@ -7,7 +7,6 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col items-center justify-between xl:flex-row">
           <div className="flex flex-col items-start justify-center w-full h-full pr-8 mb-10 xl:mb-0 xl:w-6/12">
-
             <div className="flex flex-col md:flex-row justify-start items-center">
               <h2 className="ml-2 text-3xl font-extrabold font-display leading-tight sm:text-4xl sm:leading-none md:text-5xl lg:text-5xl xl:text-6xl z-50">
                 Align your lifestyle with your landscape
