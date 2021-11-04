@@ -13,7 +13,7 @@ const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/content
 const discussUrl = (slug) =>
   `https://mobile.twitter.com/search?q=${encodeURIComponent(`${siteMetadata.siteUrl}/${slug}`)}`
 
-const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
+const postDateTemplate = { year: 'numeric', month: 'long', day: 'numeric' }
 
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
   const {
@@ -29,7 +29,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
   }
 
   const onSubmit = (data) => subscribe(data)
-  const { slug, fileName, date, title, photo, tags } = frontMatter
+  const { slug, fileName, date, updated, title, photo, tags } = frontMatter
 
   return (
     <SectionContainer>
@@ -42,7 +42,14 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
         <div className="xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
           <header className="pt-6 xl:pb-6 max-w-5xl mx-auto">
             <div className="space-y-1 text-center">
-              <dl className="space-y-10">
+              <div>
+                <PageTitle>{title}</PageTitle>
+              </div>
+              <div>
+                <img src={photo} />
+              </div>
+
+              <dl className="space-y-10 py-6">
                 <div>
                   <dt className="sr-only">Published on</dt>
                   <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
@@ -50,14 +57,20 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                       {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
                     </time>
                   </dd>
+
+                  <dd className="text-base font-thin leading-6 text-gray-500 dark:text-gray-400">
+                    <em>
+                      Last Updated&nbsp;
+                      <time dateTime={updated}>
+                        {new Date(updated).toLocaleDateString(
+                          siteMetadata.locale,
+                          postDateTemplate
+                        )}
+                      </time>
+                    </em>
+                  </dd>
                 </div>
               </dl>
-              <div>
-                <PageTitle>{title}</PageTitle>
-              </div>
-              <div>
-                <img src={photo} />
-              </div>
             </div>
           </header>
           <div
