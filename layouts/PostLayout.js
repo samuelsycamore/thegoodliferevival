@@ -40,7 +40,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
       />
       <article>
         <div className="xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
-          <header className="pt-6 xl:pb-6">
+          <header className="pt-6 xl:pb-6 max-w-5xl mx-auto">
             <div className="space-y-1 text-center">
               <dl className="space-y-10">
                 <div>
@@ -61,7 +61,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
             </div>
           </header>
           <div
-            className="pb-8 divide-y divide-gray-200 xl:divide-y-0 dark:divide-gray-700 xl:grid xl:grid-cols-4 xl:gap-x-6"
+            className="pb-8 divide-y divide-gray-200 xl:divide-y-0 dark:divide-gray-700 xl:grid xl:grid-cols-4 xl:gap-x-10"
             style={{ gridTemplateRows: 'auto 1fr' }}
           >
             <dl className="pt-6 pb-10 xl:pt-11 xl:border-b xl:border-gray-200 xl:dark:border-gray-700">
@@ -108,7 +108,9 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
               </dd>
             </dl>
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:pb-0 xl:col-span-3 xl:row-span-2">
-              <div className="pt-10 pb-8 px-8 max-w-prose prose dark:prose-dark max-w-none">{children}</div>
+              <div className="pt-10 pb-8 max-w-prose prose dark:prose-dark max-w-none">
+                {children}
+              </div>
               {/* <Comments frontMatter={frontMatter} /> */}
             </div>
 
@@ -156,11 +158,10 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
               ) : (
                 <div className="w-100 bg-gray-100 dark:bg-gray-800 p-4 rounded-lg">
                   <p className="font-extrabold text-lg mb-2">
-                    Get early access to my tutorials and courses
+                    You don't have to walk the path alone.
                   </p>
                   <p className="mb-8">
-                    Leave your email address below and I'll notify you whenever new content is
-                    released.
+                    Leave your email address below to be notified when we publish new content.
                   </p>
                   <form className="sm:flex flex-col" onSubmit={handleSubmit(onSubmit)}>
                     <label htmlFor="email-address" className="sr-only">
@@ -173,7 +174,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                       autoComplete="email"
                       required
                       className="w-full dark:bg-gray-900 border-gray-500 px-5 py-3 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-700 focus:ring-gray-800 dark:focus:ring-white rounded-md"
-                      placeholder="Enter your email"
+                      placeholder="Your email"
                       {...register('email', {
                         required: 'Email is required.',
                         pattern: {
@@ -190,11 +191,11 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                       disabled={isSubmitting}
                       className="mt-3 w-full flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-500 hover:bg-primary-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-700 focus:ring-white sm:w-auto sm:flex-shrink-0"
                     >
-                      Get notified
+                      Stay in touch
                     </button>
                   </form>
                   <p className="mt-3 text-sm text-gray-600 dark:text-gray-100">
-                    I won't spam. Promise.
+                    No spam, ever.
                   </p>
                 </div>
               )}
