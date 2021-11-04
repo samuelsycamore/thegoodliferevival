@@ -194,9 +194,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                       Stay in touch
                     </button>
                   </form>
-                  <p className="mt-3 text-sm text-gray-600 dark:text-gray-100">
-                    No spam, ever.
-                  </p>
+                  <p className="mt-3 text-sm text-gray-600 dark:text-gray-100">No spam, ever.</p>
                 </div>
               )}
               <div className="pt-4 xl:pt-8">
