@@ -65,7 +65,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
             style={{ gridTemplateRows: 'auto 1fr' }}
           >
             <dl className="pt-6 pb-10 xl:pt-11 xl:border-b xl:border-gray-200 xl:dark:border-gray-700">
-              <dt className="sr-only">Authors</dt>
+              <dt className="sr-only">Author</dt>
               <dd>
                 <ul className="flex justify-center space-x-8 xl:block sm:space-x-12 xl:space-x-0 xl:space-y-8">
                   {authorDetails.map((author) => (
@@ -73,13 +73,13 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                       {author.avatar && (
                         <Image
                           src={author.avatar}
-                          width="38px"
-                          height="38px"
+                          width="200px"
+                          height="200px"
                           alt="avatar"
-                          className="w-10 h-10 rounded-full"
+                          className="w-16 h-16 rounded-full"
                         />
                       )}
-                      <dl className="text-sm font-medium leading-5 whitespace-nowrap">
+                      <dl className="text-sm font-medium leading-5">
                         <dt className="sr-only">Name</dt>
                         <dd className="text-gray-900 dark:text-gray-100">{author.name}</dd>
                         <dt className="sr-only">Twitter</dt>
@@ -93,6 +93,10 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                             </Link>
                           )}
                         </dd>
+                        <dt className="sr-only">Occupation</dt>
+                        <dd className="text-gray-700 dark:text-gray-300 leading-6">{author.occupation}</dd>
+                        <dt className="sr-only">Education</dt>
+                        <dd className="text-gray-700 dark:text-gray-300 leading-6">{author.education}</dd>
                       </dl>
                     </li>
                   ))}
@@ -101,13 +105,6 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
             </dl>
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:pb-0 xl:col-span-3 xl:row-span-2">
               <div className="pt-10 pb-8 prose dark:prose-dark max-w-none">{children}</div>
-              <div className="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
-                <Link href={discussUrl(slug)} rel="nofollow">
-                  {'Discuss on Twitter'}
-                </Link>
-                {` • `}
-                <Link href={editUrl(fileName)}>{'View on GitHub'}</Link>
-              </div>
               {/* <Comments frontMatter={frontMatter} /> */}
             </div>
 

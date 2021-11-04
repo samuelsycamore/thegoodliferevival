@@ -9,7 +9,7 @@ export default function AuthorLayout({ children, frontMatter }) {
     <>
       <PageSEO
         title={`About - ${name}`}
-        description={`${name} - Helping to grow digital product agencies and indie developers.`}
+        description={`${name}`}
       />
       <div className="divide-y">
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
