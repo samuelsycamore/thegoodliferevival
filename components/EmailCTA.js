@@ -4,7 +4,7 @@ import SuccessMessage from '@/components/SuccessMessage'
 
 const EmailCTA = ({
   title = 'Start your foraging journey today',
-  description = 'Sign up to receive the first two chapters of Foraging North America delivered straight to your inbox for free.',
+  description = `Sign up to receive the first two chapters of 'Introduction to Foraging' delivered straight to your inbox for free.`,
   list = 'monthly',
   cta = 'Sign up',
   embedded = false,
