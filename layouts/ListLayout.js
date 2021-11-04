@@ -48,7 +48,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
         <ul>
           {!filteredBlogPosts.length && 'No posts found.'}
           {displayPosts.map((frontMatter) => {
-            const { slug, date, photo, title, summary, tags, lastmod } = frontMatter
+            const { slug, date, photo, title, summary, tags, updated } = frontMatter
             return (
               <Link
                 href={`/${slug}`}
@@ -56,39 +56,41 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                 className="my-4 flex group hover:bg-gray-100 dark:hover:bg-gray-800 bg-transparent bg-opacity-20 px-2 hover:rounded-xl transition duration-200"
               >
                 <li className="py-12 px-4">
-                  <article className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
-                    <div>
-                      <dl>
-                        <dt className="sr-only">Published on</dt>
-                        <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                          <time dateTime={date}>{formatDate(date)}</time>
-                        </dd>
-                      </dl>
-                      {lastmod && (
-                        <dl>
-                          <dt className="mt-8">Last updated</dt>
-                          <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                            <time dateTime={lastmod}>{formatDate(lastmod)}</time>
-                          </dd>
-                        </dl>
-                      )}
-                    </div>
-                    <div className="space-y-3 xl:col-span-3">
+                  <article className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-start">
+                    
+                    
+                    <div className="space-y-3 xl:col-span-3 max-w-prose">
                       <div>
-                        <h3 className="text-2xl font-bold leading-8 tracking-tight">
-                          <Link href={`/${slug}`} className="text-gray-900 dark:text-gray-100">
-                            {title}
-                          </Link>
-                        </h3>
-                        <div className="flex flex-wrap">
-                          {tags.map((tag) => (
-                            <Tag key={tag} text={tag} />
-                          ))}
-                        </div>
+                        <Link href={`/${slug}`} className="text-gray-900 dark:text-gray-100">
+                          <img src={photo} className="mx-auto rounded-lg border-2" />
+                          <h3 className="text-2xl font-bold leading-8 tracking-tight mt-8">{title}</h3>
+                        </Link>
+                        
                       </div>
                       <div className="prose text-gray-500 max-w-none dark:text-gray-400">
                         {summary}
                       </div>
+                    </div>
+                    <div>
+                      <dl>
+                        <dt className="">Published on</dt>
+                        <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                          <time dateTime={date}>{formatDate(date)}</time>
+                        </dd>
+                      </dl>
+                      {/*updated && (
+                        <dl>
+                          <dt className="mt-8 italic">Last updated</dt>
+                          <dd className="text-base font-medium italic leading-6 text-gray-500 dark:text-gray-400">
+                            <time dateTime={updated}>{formatDate(updated)}</time>
+                          </dd>
+                        </dl>
+                      )*/}
+                      <div className="flex flex-wrap mt-8 pr-8">
+                          {tags.map((tag) => (
+                            <Tag key={tag} text={tag} />
+                          ))}
+                        </div>
                     </div>
                   </article>
                 </li>
