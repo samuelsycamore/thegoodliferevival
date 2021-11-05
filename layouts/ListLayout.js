@@ -57,15 +57,14 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
               >
                 <li className="py-12 px-4">
                   <article className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-start">
-                    
-                    
                     <div className="space-y-3 xl:col-span-3 max-w-prose">
                       <div>
                         <Link href={`/${slug}`} className="text-gray-900 dark:text-gray-100">
                           <img src={photo} className="mx-auto rounded-lg border-2" />
-                          <h3 className="text-2xl font-bold leading-8 tracking-tight mt-8">{title}</h3>
+                          <h3 className="text-2xl font-bold leading-8 tracking-tight mt-8">
+                            {title}
+                          </h3>
                         </Link>
-                        
                       </div>
                       <div className="prose text-gray-500 max-w-none dark:text-gray-400">
                         {summary}
@@ -87,10 +86,10 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                         </dl>
                       )*/}
                       <div className="flex flex-wrap mt-8 pr-8">
-                          {tags.map((tag) => (
-                            <Tag key={tag} text={tag} />
-                          ))}
-                        </div>
+                        {tags.map((tag) => (
+                          <Tag key={tag} text={tag} />
+                        ))}
+                      </div>
                     </div>
                   </article>
                 </li>
