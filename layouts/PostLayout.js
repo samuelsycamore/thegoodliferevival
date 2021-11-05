@@ -212,10 +212,10 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
               )}
               <div className="pt-4 xl:pt-8">
                 <Link
-                  href="/content"
+                  href="/blog"
                   className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                 >
-                  &larr; Back to content
+                  &larr; Return to the blog
                 </Link>
               </div>
             </footer>

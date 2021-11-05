@@ -38,14 +38,13 @@ export default function Home({ posts }) {
                   <article>
                     <div className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 space-x-8 xl:items-start">
                       <dl>
-                      <img src={photo} className="rounded-lg" />
+                        <img src={photo} className="rounded-lg" />
                         <dt className="sr-only">Published on</dt>
                         <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400 mt-4">
                           <time dateTime={date}>{formatDate(date)}</time>
                         </dd>
-                        
                       </dl>
-                      
+
                       <div className="space-y-5 xl:col-span-3">
                         <div className="space-y-6">
                           <div>
