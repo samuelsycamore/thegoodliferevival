@@ -27,7 +27,7 @@ export default function Home({ posts }) {
         <ul className="">
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
-            const { slug, date, title, summary, tags } = frontMatter
+            const { slug, date, photo, title, summary, tags } = frontMatter
             return (
               <Link
                 href={`/${slug}`}
@@ -36,13 +36,16 @@ export default function Home({ posts }) {
               >
                 <li className="py-12 px-4">
                   <article>
-                    <div className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
+                    <div className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 space-x-8 xl:items-start">
                       <dl>
+                      <img src={photo} className="rounded-lg" />
                         <dt className="sr-only">Published on</dt>
-                        <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                        <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400 mt-4">
                           <time dateTime={date}>{formatDate(date)}</time>
                         </dd>
+                        
                       </dl>
+                      
                       <div className="space-y-5 xl:col-span-3">
                         <div className="space-y-6">
                           <div>
