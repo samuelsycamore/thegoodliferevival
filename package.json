@@ -1,6 +1,6 @@
 {
-  "name": "david-levai-garden",
-  "version": "0.2.0",
+  "name": "the-good-life-revival",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "dev": "cross-env TAILWIND_MODE=watch next dev",
