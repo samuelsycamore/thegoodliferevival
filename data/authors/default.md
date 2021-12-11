@@ -1,7 +1,7 @@
 ---
 name: Sam Sycamore
 avatar: /static/images/avatar.png
-occupation: Writer, botanist, gardening & foraging instructor. 
+occupation: Writer, botanist, gardening & foraging instructor.
 education: B.S.—Ecology & Evolutionary Biology, University of Louisville, 2012.
 company: Sycamore Design
 email: sam@sycamore.design
@@ -16,14 +16,14 @@ I'm Sam Sycamore, a writer and radical ecologist from Kentucky, now residing in 
 
 "The good life" means something a little different to everybody, but I love discussing this topic with other people because everyone has their own definition, and I derive great joy and inspiration from hearing the stories of others who've also chosen this path back to nature.
 
-Here's how I like to define the good life, in the simplest terms: 
+Here's how I like to define the good life, in the simplest terms:
 
-- our days are self-directed, 
+- our days are self-directed,
 
-- our meals are self-produced, 
+- our meals are self-produced,
 
-- our communities are self-sustaining, and 
+- our communities are self-sustaining, and
 
-- our landscapes are self-regenerating. 
+- our landscapes are self-regenerating.
 
 A lofty goal indeed, but I know for a fact that it's achievable!

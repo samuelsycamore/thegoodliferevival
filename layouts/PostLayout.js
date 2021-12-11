@@ -1,19 +1,19 @@
-import Link from '@/components/Link'
-import PageTitle from '@/components/PageTitle'
-import SectionContainer from '@/components/SectionContainer'
-import { BlogSEO } from '@/components/SEO'
-import SuccessMessage from '@/components/SuccessMessage'
-import Image from '@/components/Image'
-import { useForm } from 'react-hook-form'
-import { ErrorMessage } from '@hookform/error-message'
-import Tag from '@/components/Tag'
-import siteMetadata from '@/data/siteMetadata'
+import Link from "@/components/Link";
+import PageTitle from "@/components/PageTitle";
+import SectionContainer from "@/components/SectionContainer";
+import { BlogSEO } from "@/components/SEO";
+import SuccessMessage from "@/components/SuccessMessage";
+import Image from "@/components/Image";
+import { useForm } from "react-hook-form";
+import { ErrorMessage } from "@hookform/error-message";
+import Tag from "@/components/Tag";
+import siteMetadata from "@/data/siteMetadata";
 
-const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/content/${fileName}`
+const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/content/${fileName}`;
 const discussUrl = (slug) =>
-  `https://mobile.twitter.com/search?q=${encodeURIComponent(`${siteMetadata.siteUrl}/${slug}`)}`
+  `https://mobile.twitter.com/search?q=${encodeURIComponent(`${siteMetadata.siteUrl}/${slug}`)}`;
 
-const postDateTemplate = { year: 'numeric', month: 'long', day: 'numeric' }
+const postDateTemplate = { year: "numeric", month: "long", day: "numeric" };
 
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
   const {
@@ -21,15 +21,15 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
     handleSubmit,
     reset,
     formState: { errors, isSubmitSuccessful, isSubmitting },
-  } = useForm()
+  } = useForm();
 
   const subscribe = async ({ email }) => {
-    const res = await fetch(`/api/subscribe?email=${email}&list=monthly`)
-    return res
-  }
+    const res = await fetch(`/api/subscribe?email=${email}&list=monthly`);
+    return res;
+  };
 
-  const onSubmit = (data) => subscribe(data)
-  const { slug, fileName, date, updated, title, photo, tags } = frontMatter
+  const onSubmit = (data) => subscribe(data);
+  const { slug, fileName, date, updated, title, photo, tags } = frontMatter;
 
   return (
     <SectionContainer>
@@ -75,7 +75,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
           </header>
           <div
             className="pb-8 divide-y divide-gray-200 xl:divide-y-0 dark:divide-gray-700 xl:grid xl:grid-cols-4 xl:gap-x-10"
-            style={{ gridTemplateRows: 'auto 1fr' }}
+            style={{ gridTemplateRows: "auto 1fr" }}
           >
             <dl className="pt-6 pb-10 xl:pt-11 xl:border-b xl:border-gray-200 xl:dark:border-gray-700">
               <dt className="sr-only">Author</dt>
@@ -102,7 +102,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                               href={author.twitter}
                               className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                             >
-                              {author.twitter.replace('https://twitter.com/', '@')}
+                              {author.twitter.replace("https://twitter.com/", "@")}
                             </Link>
                           )}
                         </dd>
@@ -188,12 +188,12 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                       required
                       className="w-full dark:bg-gray-900 border-gray-500 px-5 py-3 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-700 focus:ring-gray-800 dark:focus:ring-white rounded-md"
                       placeholder="Your email"
-                      {...register('email', {
-                        required: 'Email is required.',
+                      {...register("email", {
+                        required: "Email is required.",
                         pattern: {
                           value: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
                         },
-                        message: 'Please enter a vaild email.',
+                        message: "Please enter a vaild email.",
                       })}
                       disabled={isSubmitting}
                     />
@@ -223,5 +223,5 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
         </div>
       </article>
     </SectionContainer>
-  )
+  );
 }

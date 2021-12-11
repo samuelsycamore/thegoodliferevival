@@ -1,16 +1,16 @@
-import { MDXLayoutRenderer } from '@/components/MDXComponents'
-import { getFileBySlug } from '@/lib/mdx'
-import Link from '@/components/Link'
+import { MDXLayoutRenderer } from "@/components/MDXComponents";
+import { getFileBySlug } from "@/lib/mdx";
+import Link from "@/components/Link";
 
-const DEFAULT_LAYOUT = 'AuthorLayout'
+const DEFAULT_LAYOUT = "AuthorLayout";
 
 export async function getStaticProps() {
-  const authorDetails = await getFileBySlug('authors', ['default'])
-  return { props: { authorDetails } }
+  const authorDetails = await getFileBySlug("authors", ["default"]);
+  return { props: { authorDetails } };
 }
 
 export default function About({ authorDetails }) {
-  const { mdxSource, frontMatter } = authorDetails
+  const { mdxSource, frontMatter } = authorDetails;
 
   return (
     <div className="max-w-6xl mx-auto">
@@ -20,5 +20,5 @@ export default function About({ authorDetails }) {
         frontMatter={frontMatter}
       />
     </div>
-  )
+  );
 }

@@ -1,16 +1,16 @@
-import Link from '@/components/Link'
-import { PageSEO } from '@/components/SEO'
-import Tag from '@/components/Tag'
-import formatDate from '@/lib/utils/formatDate'
-import siteMetadata from '@/data/siteMetadata'
-import { getAllFilesFrontMatter } from '@/lib/mdx'
+import Link from "@/components/Link";
+import { PageSEO } from "@/components/SEO";
+import Tag from "@/components/Tag";
+import formatDate from "@/lib/utils/formatDate";
+import siteMetadata from "@/data/siteMetadata";
+import { getAllFilesFrontMatter } from "@/lib/mdx";
 
-const MAX_DISPLAY = 5
+const MAX_DISPLAY = 5;
 
 export async function getStaticProps() {
-  const posts = await getAllFilesFrontMatter('content')
+  const posts = await getAllFilesFrontMatter("content");
 
-  return { props: { posts } }
+  return { props: { posts } };
 }
 
 export default function Home({ posts }) {
@@ -25,9 +25,9 @@ export default function Home({ posts }) {
           </h3>
         </div>
         <ul className="">
-          {!posts.length && 'No posts found.'}
+          {!posts.length && "No posts found."}
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
-            const { slug, date, photo, title, summary, tags } = frontMatter
+            const { slug, date, photo, title, summary, tags } = frontMatter;
             return (
               <Link
                 href={`/${slug}`}
@@ -77,7 +77,7 @@ export default function Home({ posts }) {
                   </article>
                 </li>
               </Link>
-            )
+            );
           })}
         </ul>
       </div>
@@ -93,5 +93,5 @@ export default function Home({ posts }) {
         </div>
       )}
     </>
-  )
+  );
 }

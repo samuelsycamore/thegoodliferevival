@@ -1,12 +1,12 @@
-import { useForm } from 'react-hook-form'
-import { ErrorMessage } from '@hookform/error-message'
-import SuccessMessage from '@/components/SuccessMessage'
+import { useForm } from "react-hook-form";
+import { ErrorMessage } from "@hookform/error-message";
+import SuccessMessage from "@/components/SuccessMessage";
 
 const EmailCTA = ({
-  title = 'Start your foraging journey today',
+  title = "Start your foraging journey today",
   description = `Sign up to receive the first two chapters of 'Introduction to Foraging' delivered straight to your inbox for free.`,
-  list = 'monthly',
-  cta = 'Sign up',
+  list = "monthly",
+  cta = "Sign up",
   embedded = false,
 }) => {
   const {
@@ -14,21 +14,21 @@ const EmailCTA = ({
     handleSubmit,
     reset,
     formState: { errors, isSubmitSuccessful, isSubmitting },
-  } = useForm()
+  } = useForm();
 
   const subscribe = async ({ email }) => {
-    const res = await fetch(`/api/subscribe?email=${email}&list=${list}`)
-    return res
-  }
+    const res = await fetch(`/api/subscribe?email=${email}&list=${list}`);
+    return res;
+  };
 
-  const onSubmit = (data) => subscribe(data)
+  const onSubmit = (data) => subscribe(data);
 
   return (
     <div className="">
       <div className="mx-auto">
         <div
           className={`${
-            embedded ? 'px-4 py-2' : 'px-12 py-12'
+            embedded ? "px-4 py-2" : "px-12 py-12"
           } bg-gray-100 dark:bg-gray-800 rounded-xl lg:flex lg:items-center`}
         >
           {isSubmitSuccessful ? (
@@ -52,12 +52,12 @@ const EmailCTA = ({
                     required
                     className="w-full border-gray-500 dark:border-white px-5 py-3 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-700 focus:ring-gray-800 dark:focus:ring-white rounded-md text-black"
                     placeholder="Enter your email"
-                    {...register('email', {
-                      required: 'Email is required.',
+                    {...register("email", {
+                      required: "Email is required.",
                       pattern: {
                         value: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
                       },
-                      message: 'Please enter a vaild email.',
+                      message: "Please enter a vaild email.",
                     })}
                     disabled={isSubmitting}
                   />
@@ -80,7 +80,7 @@ const EmailCTA = ({
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default EmailCTA
+export default EmailCTA;

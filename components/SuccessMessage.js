@@ -1,4 +1,4 @@
-import { XIcon } from '@heroicons/react/outline'
+import { XIcon } from "@heroicons/react/outline";
 
 const SuccessMessage = ({ handleReset }) => (
   <p className="text-lg p-3 flex">
@@ -12,6 +12,6 @@ const SuccessMessage = ({ handleReset }) => (
       </button>
     </span>
   </p>
-)
+);
 
-export default SuccessMessage
+export default SuccessMessage;

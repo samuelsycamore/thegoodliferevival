@@ -1,18 +1,18 @@
-import Link from '@/components/Link'
-import Tag from '@/components/Tag'
-import { useState } from 'react'
-import Pagination from '@/components/Pagination'
-import formatDate from '@/lib/utils/formatDate'
+import Link from "@/components/Link";
+import Tag from "@/components/Tag";
+import { useState } from "react";
+import Pagination from "@/components/Pagination";
+import formatDate from "@/lib/utils/formatDate";
 
 export default function ListLayout({ posts, title, initialDisplayPosts = [], pagination }) {
-  const [searchValue, setSearchValue] = useState('')
+  const [searchValue, setSearchValue] = useState("");
   const filteredBlogPosts = posts.filter((frontMatter) => {
-    const searchContent = frontMatter.title + frontMatter.summary + frontMatter.tags.join(' ')
-    return searchContent.toLowerCase().includes(searchValue.toLowerCase())
-  })
+    const searchContent = frontMatter.title + frontMatter.summary + frontMatter.tags.join(" ");
+    return searchContent.toLowerCase().includes(searchValue.toLowerCase());
+  });
 
   const displayPosts =
-    initialDisplayPosts.length > 0 && !searchValue ? initialDisplayPosts : filteredBlogPosts
+    initialDisplayPosts.length > 0 && !searchValue ? initialDisplayPosts : filteredBlogPosts;
 
   return (
     <>
@@ -46,9 +46,9 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
           </div>
         </div>
         <ul>
-          {!filteredBlogPosts.length && 'No posts found.'}
+          {!filteredBlogPosts.length && "No posts found."}
           {displayPosts.map((frontMatter) => {
-            const { slug, date, photo, title, summary, tags, updated } = frontMatter
+            const { slug, date, photo, title, summary, tags, updated } = frontMatter;
             return (
               <Link
                 href={`/${slug}`}
@@ -94,7 +94,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
                   </article>
                 </li>
               </Link>
-            )
+            );
           })}
         </ul>
       </div>
@@ -103,5 +103,5 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
         <Pagination currentPage={pagination.currentPage} totalPages={pagination.totalPages} />
       )}
     </>
-  )
+  );
 }

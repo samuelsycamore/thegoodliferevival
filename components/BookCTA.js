@@ -3,7 +3,7 @@ const BookCTA = () => (
     <h2>Foraging North America</h2>
     <h4>Did you find this article helpful?</h4>
     <p>
-      This is an excerpt from{' '}
+      This is an excerpt from{" "}
       <em>Foraging North America: The Botany, Taxonomy and Ecology of Edible Wild Plants</em>.
     </p>
     <p>
@@ -13,7 +13,7 @@ const BookCTA = () => (
       first (or five-hundredth!) time.
     </p>
     <p>
-      You'll get a practical education in ecological literacy by applying the ethos of{' '}
+      You'll get a practical education in ecological literacy by applying the ethos of{" "}
       <strong>conservation through use</strong>—the (surprisingly) radical notion that humans can,
       in fact, have a positive impact on the environments that we move through.
     </p>
@@ -22,6 +22,6 @@ const BookCTA = () => (
       Check out <em>Foraging North America</em> to get started today.
     </p>
   </div>
-)
+);
 
-export default BookCTA
+export default BookCTA;

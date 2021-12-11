@@ -1,8 +1,8 @@
-import Image from '@/components/Image'
-import Link from '@/components/Link'
+import Image from "@/components/Image";
+import Link from "@/components/Link";
 
 const Card = ({ title, description, imgSrc, href }) => (
-  <div className="p-4 md:w-1/2 md" style={{ maxWidth: '544px' }}>
+  <div className="p-4 md:w-1/2 md" style={{ maxWidth: "544px" }}>
     <div className="h-full border-2 border-gray-200 border-opacity-60 dark:border-gray-700 rounded-md overflow-hidden">
       {href ? (
         <Link href={href} aria-label={`Link to ${title}`}>
@@ -46,6 +46,6 @@ const Card = ({ title, description, imgSrc, href }) => (
       </div>
     </div>
   </div>
-)
+);
 
-export default Card
+export default Card;

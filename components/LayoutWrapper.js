@@ -1,12 +1,12 @@
-import siteMetadata from '@/data/siteMetadata'
-import headerNavLinks from '@/data/headerNavLinks'
-import Logo from '@/data/logo.svg'
-import Link from './Link'
-import SectionContainer from './SectionContainer'
-import Footer from './Footer'
-import MobileNav from './MobileNav'
-import Hero from './Hero'
-import ThemeSwitch from './ThemeSwitch'
+import siteMetadata from "@/data/siteMetadata";
+import headerNavLinks from "@/data/headerNavLinks";
+import Logo from "@/data/logo.svg";
+import Link from "./Link";
+import SectionContainer from "./SectionContainer";
+import Footer from "./Footer";
+import MobileNav from "./MobileNav";
+import Hero from "./Hero";
+import ThemeSwitch from "./ThemeSwitch";
 
 const LayoutWrapper = ({ isHome, children }) => {
   if (isHome) {
@@ -20,7 +20,7 @@ const LayoutWrapper = ({ isHome, children }) => {
                   <div className="mr-3">
                     <Logo />
                   </div>
-                  {typeof siteMetadata.headerTitle === 'string' ? (
+                  {typeof siteMetadata.headerTitle === "string" ? (
                     <div className="h-6 text-2xl font-semibold sm:block">
                       {siteMetadata.headerTitle}
                     </div>
@@ -51,7 +51,7 @@ const LayoutWrapper = ({ isHome, children }) => {
           <Footer />
         </div>
       </SectionContainer>
-    )
+    );
   } else {
     return (
       <SectionContainer>
@@ -63,7 +63,7 @@ const LayoutWrapper = ({ isHome, children }) => {
                   <div className="mr-3">
                     <Logo />
                   </div>
-                  {typeof siteMetadata.headerTitle === 'string' ? (
+                  {typeof siteMetadata.headerTitle === "string" ? (
                     <div className="hidden h-6 text-2xl font-semibold sm:block">
                       {siteMetadata.headerTitle}
                     </div>
@@ -93,8 +93,8 @@ const LayoutWrapper = ({ isHome, children }) => {
           <Footer />
         </div>
       </SectionContainer>
-    )
+    );
   }
-}
+};
 
-export default LayoutWrapper
+export default LayoutWrapper;

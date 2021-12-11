@@ -1,5 +1,5 @@
-import Image from '@/components/Image'
-import Link from '@/components/Link'
+import Image from "@/components/Image";
+import Link from "@/components/Link";
 
 const Hero = () => {
   return (
@@ -87,7 +87,7 @@ const Hero = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

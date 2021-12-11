@@ -1,27 +1,27 @@
-import { ChevronRightIcon } from '@heroicons/react/solid'
-import { BookOpenIcon, VideoCameraIcon, CodeIcon } from '@heroicons/react/outline'
-import Link from '@/components/Link'
+import { ChevronRightIcon } from "@heroicons/react/solid";
+import { BookOpenIcon, VideoCameraIcon, CodeIcon } from "@heroicons/react/outline";
+import Link from "@/components/Link";
 
 const links = [
   {
-    title: 'Content',
-    description: 'Read about the business of IT or how to build production-ready SaaS',
+    title: "Content",
+    description: "Read about the business of IT or how to build production-ready SaaS",
     icon: BookOpenIcon,
-    route: '/content',
+    route: "/content",
   },
   {
-    title: 'Projects',
-    description: 'My open-source and private projects',
+    title: "Projects",
+    description: "My open-source and private projects",
     icon: CodeIcon,
-    route: '/projects',
+    route: "/projects",
   },
   {
-    title: 'YouTube',
-    description: 'Tutorials, guides, and vlog',
+    title: "YouTube",
+    description: "Tutorials, guides, and vlog",
     icon: VideoCameraIcon,
-    route: 'https://dvdlv.me/yt',
+    route: "https://dvdlv.me/yt",
   },
-]
+];
 
 export default function FourOFour() {
   return (
@@ -74,5 +74,5 @@ export default function FourOFour() {
         </div>
       </div>
     </main>
-  )
+  );
 }
