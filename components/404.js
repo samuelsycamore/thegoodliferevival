@@ -4,24 +4,25 @@ import Link from "@/components/Link";
 
 const links = [
   {
-    title: "Content",
-    description: "Read about the business of IT or how to build production-ready SaaS",
+    title: "Blog",
+    description: "the blog",
     icon: BookOpenIcon,
-    route: "/content",
+    route: "/blog",
   },
   {
-    title: "Projects",
-    description: "My open-source and private projects",
+    title: "Shop",
+    description: "the shop",
     icon: CodeIcon,
     route: "/projects",
   },
   {
-    title: "YouTube",
-    description: "Tutorials, guides, and vlog",
+    title: "About",
+    description: "about us",
     icon: VideoCameraIcon,
-    route: "https://dvdlv.me/yt",
+    route: "/about",
   },
 ];
+
 
 export default function FourOFour() {
   return (
