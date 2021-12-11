@@ -100,7 +100,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                           {author.twitter && (
                             <Link
                               href={author.twitter}
-                              className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+                              className="text-primary-600 hover:text-primary-700 dark:hover:text-primary-500"
                             >
                               {author.twitter.replace("https://twitter.com/", "@")}
                             </Link>
@@ -148,7 +148,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                         <h2 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
                           Previous Article
                         </h2>
-                        <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
+                        <div className="text-primary-600 hover:text-primary-700 dark:hover:text-primary-500">
                           <Link href={`/${prev.slug}`}>{prev.title}</Link>
                         </div>
                       </div>
@@ -158,7 +158,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                         <h2 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
                           Next Article
                         </h2>
-                        <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
+                        <div className="text-primary-600 hover:text-primary-700 dark:hover:text-primary-500">
                           <Link href={`/${next.slug}`}>{next.title}</Link>
                         </div>
                       </div>
@@ -213,7 +213,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
               <div className="pt-4 xl:pt-8">
                 <Link
                   href="/blog"
-                  className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+                  className="text-primary-600 hover:text-primary-700 dark:hover:text-primary-500"
                 >
                   &larr; Return to the blog
                 </Link>

@@ -21,7 +21,7 @@ const Hero = () => {
             </p>
             <Link href="/blog">
               <p
-                className="my-3 font-bold text-sm leading-6 text-green-600 flex flex-row items-center"
+                className="my-3 font-bold text-sm leading-6 text-primary-500 flex flex-row items-center"
                 target="_blank"
                 rel="noreferrer noopener"
               >
