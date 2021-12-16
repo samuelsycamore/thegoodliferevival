@@ -5,6 +5,9 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { SEO } from "@/components/SEO";
 import LayoutWrapper from "@/components/LayoutWrapper";
+import LogRocket from "logrocket";
+
+LogRocket.init("tbaevw/sycamore-design");
 
 export default function App({ Component, pageProps }) {
   const { pathname } = useRouter();
