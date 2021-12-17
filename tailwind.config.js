@@ -22,9 +22,9 @@ module.exports = {
       colors: {
         darkBg: "#38252e",
         darkBgLight: "#27272a",
-        blue: colors.lightBlue,
+        blue: colors.sky,
         fuchsia: colors.fuchsia,
-        gray: colors.blueGray,
+        gray: colors.slate,
         primary: colors.sky,
         ...colors,
       },

@@ -29,54 +29,48 @@ export default function Home({ posts }) {
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
             const { slug, date, photo, title, summary, tags } = frontMatter;
             return (
-              <Link
-                href={`/${slug}`}
-                key={slug}
-                className="flex group hover:bg-gray-100 dark:hover:bg-gray-800 bg-transparent bg-opacity-20 px-2 hover:rounded-xl transition duration-200"
-              >
-                <li className="py-12 px-4">
-                  <article>
-                    <div className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 space-x-8 xl:items-start">
-                      <dl>
-                        <img src={photo} className="rounded-lg" />
-                        <dt className="sr-only">Published on</dt>
-                        <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400 mt-4">
-                          <time dateTime={date}>{formatDate(date)}</time>
-                        </dd>
-                      </dl>
+              <li className="py-12 px-4" key={slug}>
+                <article>
+                  <div className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 space-x-8 xl:items-start">
+                    <dl>
+                      <img src={photo} className="rounded-lg" />
+                      <dt className="sr-only">Published on</dt>
+                      <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400 mt-4">
+                        <time dateTime={date}>{formatDate(date)}</time>
+                      </dd>
+                    </dl>
 
-                      <div className="space-y-5 xl:col-span-3">
-                        <div className="space-y-6">
-                          <div>
-                            <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                              <Link href={`/${slug}`} className="text-gray-900 dark:text-gray-100">
-                                {title}
-                              </Link>
-                            </h2>
-                            <div className="flex flex-wrap">
-                              {tags.map((tag) => (
-                                <Tag key={tag} text={tag} />
-                              ))}
-                            </div>
-                          </div>
-                          <div className="prose text-gray-500 max-w-none dark:text-gray-400">
-                            {summary}
+                    <div className="space-y-5 xl:col-span-3">
+                      <div className="space-y-6">
+                        <div>
+                          <h2 className="text-2xl font-bold leading-8 tracking-tight">
+                            <Link href={`/${slug}`} className="text-gray-900 dark:text-gray-100">
+                              {title}
+                            </Link>
+                          </h2>
+                          <div className="flex flex-wrap">
+                            {tags.map((tag) => (
+                              <Tag key={tag} text={tag} />
+                            ))}
                           </div>
                         </div>
-                        <div className="text-base font-medium leading-6">
-                          <Link
-                            href={`/${slug}`}
-                            className="text-primary-600 hover:text-primary-700 dark:hover:text-primary-500"
-                            aria-label={`Read "${title}"`}
-                          >
-                            Read more &rarr;
-                          </Link>
+                        <div className="prose text-gray-500 max-w-none dark:text-gray-400">
+                          {summary}
                         </div>
                       </div>
+                      <div className="text-base font-medium leading-6">
+                        <Link
+                          href={`/${slug}`}
+                          className="text-primary-600 hover:text-primary-700 dark:hover:text-primary-500"
+                          aria-label={`Read "${title}"`}
+                        >
+                          Read more &rarr;
+                        </Link>
+                      </div>
                     </div>
-                  </article>
-                </li>
-              </Link>
+                  </div>
+                </article>
+              </li>
             );
           })}
         </ul>
