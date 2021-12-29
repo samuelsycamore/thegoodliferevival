@@ -9,7 +9,7 @@ import LayoutWrapper from "@/components/LayoutWrapper";
 export default function App({ Component, pageProps }) {
   const { pathname } = useRouter();
   return (
-    <ThemeProvider attribute="class" defaultTheme="dark" storageKey="iamdavidlevai-digital-garden">
+    <ThemeProvider attribute="class" defaultTheme="dark" storageKey="goodliferevival">
       <Head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>

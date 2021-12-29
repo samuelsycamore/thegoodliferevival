@@ -40,10 +40,11 @@ const Hero = () => {
               </p>
             </Link>
           </div>
+
           <div className="w-full xl:w-5/12">
             <Link href="/shop/foraging">
-              <div className="flex items-center justify-between w-full col-span-1 p-6 bg-white dark:bg-gray-800 shadow rounded-xl group hover:bg-gray-100 hover:bg-opacity-40 dark:hover:bg-opacity-40 dark:hover:bg-gray-500 backdrop-filter backdrop-blur-xl bg-opacity-60 transition duration-200 cursor-pointer">
-                <div className="flex-shrink-0 p-3 font-sans text-gray-700 dark:text-gray-50 ">
+              <div className="sm:flex items-center justify-between w-full col-span-1 p-6 bg-white dark:bg-gray-800 shadow rounded-xl group hover:bg-gray-100 hover:bg-opacity-40 dark:hover:bg-opacity-40 dark:hover:bg-gray-500 backdrop-filter backdrop-blur-xl bg-opacity-60 transition duration-200 cursor-pointer">
+                <div className="flex-shrink-0 p-3 font-sans text-gray-700 dark:text-gray-50">
                   <Image
                     src="/static/images/intro-foraging-thumbnail.png"
                     height="125"
@@ -63,7 +64,7 @@ const Hero = () => {
               </div>
             </Link>
             <Link href="/shop/fna">
-              <div className="flex items-center justify-between w-full col-span-1 p-6 bg-white dark:bg-gray-800 shadow rounded-xl mt-4 group hover:bg-gray-100 hover:bg-opacity-40 dark:hover:bg-opacity-40 dark:hover:bg-gray-500 transition duration-200 cursor-pointer">
+              <div className="sm:flex items-center justify-between w-full col-span-1 p-6 bg-white dark:bg-gray-800 shadow rounded-xl mt-4 group hover:bg-gray-100 hover:bg-opacity-40 dark:hover:bg-opacity-40 dark:hover:bg-gray-500 transition duration-200 cursor-pointer">
                 <div className="flex-shrink-0 p-3 font-sans text-gray-700 dark:text-gray-50">
                   <Image
                     src="/static/images/foraging-na-thumbnail.png"

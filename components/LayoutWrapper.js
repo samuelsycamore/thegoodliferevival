@@ -21,7 +21,7 @@ const LayoutWrapper = ({ isHome, children }) => {
                     <Logo />
                   </div>
                   {typeof siteMetadata.headerTitle === "string" ? (
-                    <h1 className="h-6 text-2xl serif sm:block">{siteMetadata.headerTitle}</h1>
+                    <h1 className="h-6 text-2xl sm:block">{siteMetadata.headerTitle}</h1>
                   ) : (
                     siteMetadata.headerTitle
                   )}
@@ -56,15 +56,12 @@ const LayoutWrapper = ({ isHome, children }) => {
         <div className="flex flex-col justify-between h-screen">
           <header className="flex items-center justify-between py-10">
             <div>
-              <Link href="/" aria-label="David Levai's Digital Garden">
+              <Link href="/" aria-label="The Good Life Revival">
                 <div className="flex items-center justify-between">
-                  <div className="mr-3">
-                    <Logo />
-                  </div>
                   {typeof siteMetadata.headerTitle === "string" ? (
-                    <div className="hidden h-6 text-2xl font-semibold sm:block">
+                    <h1 className="hidden h-6 text-2xl font-semibold sm:block">
                       {siteMetadata.headerTitle}
-                    </div>
+                    </h1>
                   ) : (
                     siteMetadata.headerTitle
                   )}

@@ -29,9 +29,9 @@ export default function Home({ posts }) {
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
             const { slug, date, photo, title, summary, tags } = frontMatter;
             return (
-              <li className="py-12 px-4" key={slug}>
+              <li className="py-12" key={slug}>
                 <article>
-                  <div className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 space-x-8 xl:items-start">
+                  <div className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:space-x-8 xl:items-start">
                     <dl>
                       <img src={photo} className="rounded-lg" />
                       <dt className="sr-only">Published on</dt>
