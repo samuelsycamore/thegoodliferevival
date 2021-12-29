@@ -18,6 +18,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
+        serif: ["tangerineregular", defaultTheme.fontFamily.sans],
       },
       colors: {
         darkBg: "#38252e",
@@ -43,6 +44,7 @@ module.exports = {
               fontWeight: "700",
               letterSpacing: theme("letterSpacing.tight"),
               color: theme("colors.gray.900"),
+              fontFamily: theme("defaultTheme.serif"),
             },
             h2: {
               fontWeight: "700",

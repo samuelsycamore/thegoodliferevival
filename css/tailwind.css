@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "tangerineregular";
+  src: url("/public/fonts/tangerine-webfont.woff2") format("woff2"),
+    url("/public/fonts/tangerine-webfont.woff") format("woff"),
+    url("/public/fonts/tangerine-webfont.ttf") format("truetype"),
+    url("/public/fonts/tangerine-webfont.svg#tangerineregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "tangerineregular";
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
